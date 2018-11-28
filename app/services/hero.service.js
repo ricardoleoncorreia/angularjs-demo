@@ -1,4 +1,4 @@
-app.factory('HeroService', function(){
+app.factory('HeroService', function(MessagesService){
   heroService = {};
 
   heroService.HEROES = [
@@ -15,6 +15,7 @@ app.factory('HeroService', function(){
   ];
 
   heroService.getHeroes = function(){
+    MessagesService.add('HeroService: fetched heroes');
     return heroService.HEROES;
   }
 
