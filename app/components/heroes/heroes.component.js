@@ -22,6 +22,6 @@ function heroesController($scope){
     { id: 20, name: 'Tornado' }
   ];
   $scope.onSelect = function(hero){
-    $scope.selectedHero = hero
+    $scope.selectedHero = hero;
   }
 };
