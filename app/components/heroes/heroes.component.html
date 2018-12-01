@@ -1,6 +1,6 @@
 <h2>My Heroes</h2>
 <ul class="heroes">
-  <li ng-repeat="hero in HEROES" ng-class="{selected: hero === selectedHero}" ng-click="onSelect(hero)">
+  <li ng-repeat="hero in HEROES track by $index" ng-class="{selected: hero === selectedHero}" ng-click="onSelect(hero)">
     <span class="badge">{{hero.id}}</span> {{hero.name}}
   </li>
 </ul>
