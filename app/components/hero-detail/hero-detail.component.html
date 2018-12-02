@@ -1,11 +1,9 @@
-<div ng-if="hero">
-
-  <h2>{{hero.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{hero.id}}</div>
-  <div>
-    <label>name:
-      <input ng-model="hero.name" placeholder="name"/>
-    </label>
-  </div>
-
+<h2>{{hero.name | uppercase}} Details</h2>
+<div><span>id: </span>{{hero.id}}</div>
+<div>
+  <label>name:
+    <input ng-model="hero.name" placeholder="name"/>
+  </label>
 </div>
+<br><br>
+<button class="clear" ng-click="goBack()">Go back</button>

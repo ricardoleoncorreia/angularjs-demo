@@ -3,7 +3,10 @@ app.component('appHeroDetail', {
   controller: heroDetailController
 });
 
-function heroDetailController($scope, $stateParams, HeroService){
+function heroDetailController($window, $scope, $stateParams, HeroService){
   $scope.heroId = $stateParams.id;
   $scope.hero = HeroService.getHero($scope.heroId);
+  $scope.goBack = function(){
+    $window.history.back();
+  }
 };
