@@ -19,5 +19,12 @@ app.factory('HeroService', function(MessagesService){
     return heroService.HEROES;
   }
 
+  heroService.getHero = function(id){
+    MessagesService.add('HeroService: fetched hero id=' + id);
+    return heroService.HEROES.find(function(element){
+      return element.id == id
+    });
+  }
+
   return heroService;
 });

@@ -5,7 +5,4 @@ app.component('appHeroes', {
 
 function heroesController($scope, HeroService){
   $scope.HEROES = HeroService.getHeroes();
-  $scope.onSelect = function(hero){
-    $scope.selectedHero = hero;
-  }
 };

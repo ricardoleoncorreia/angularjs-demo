@@ -1,6 +1,8 @@
 <h3>Top Heroes</h3>
 <div class="grid grid-pad border-dashboard">
-  <a ng-repeat="hero in HEROES track by $index" class="col-1-4 border-dashboard">
+  <a ng-repeat="hero in HEROES track by $index"
+     class="col-1-4 border-dashboard no-decoration"
+     ui-sref="detail({id: {{hero.id}}})">
     <div class="module hero border-dashboard">
       <h4>{{hero.name}}</h4>
     </div>

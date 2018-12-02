@@ -1,8 +1,8 @@
 <h2>My Heroes</h2>
 <ul class="heroes">
-  <li ng-repeat="hero in HEROES track by $index" ng-class="{selected: hero === selectedHero}" ng-click="onSelect(hero)">
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  <li ng-repeat="hero in HEROES track by $index">
+    <a ui-sref="detail({id: {{ hero.id }}})" class="no-decoration">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
   </li>
 </ul>
-
-<app-hero-detail hero="selectedHero"></app-hero-detail>

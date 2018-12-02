@@ -6,7 +6,6 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider){
     .state('home', {
       url: '/',
       template: '<app-heroes></app-heroes>',
-      // templateUrl: 'index.html',
     })
     .state('heroes', {
       url: '/heroes',
@@ -15,7 +14,12 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider){
     .state('dashboard', {
       url: '/dashboard',
       template: '<app-dashboard></app-dashboard>',
+    })
+    .state('detail', {
+      url: '/detail/{id}',
+      template: '<app-hero-detail></app-hero-detail>',
     });
+    
   
   // // Remove # symbol from url
   // $locationProvider.html5Mode({
