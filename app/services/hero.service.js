@@ -1,4 +1,4 @@
-app.factory('HeroService', function(MessagesService){
+app.factory('HeroService', ['MessagesService', function(MessagesService){
   heroService = {};
 
   heroService.HEROES = [
@@ -27,4 +27,4 @@ app.factory('HeroService', function(MessagesService){
   }
 
   return heroService;
-});
+}]);

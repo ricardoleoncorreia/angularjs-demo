@@ -1,12 +1,10 @@
 app.component('appHeroDetail', {
   templateUrl: 'app/components/hero-detail/hero-detail.component.html',
-  controller: heroDetailController
+  controller: ['$window', '$scope', '$stateParams', 'HeroService', function heroDetailController($window, $scope, $stateParams, HeroService){
+    $scope.heroId = $stateParams.id;
+    $scope.hero = HeroService.getHero($scope.heroId);
+    $scope.goBack = function(){
+      $window.history.back();
+    }
+  }]
 });
-
-function heroDetailController($window, $scope, $stateParams, HeroService){
-  $scope.heroId = $stateParams.id;
-  $scope.hero = HeroService.getHero($scope.heroId);
-  $scope.goBack = function(){
-    $window.history.back();
-  }
-};
